@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://brlxcs7rxk23y"]
+
+[ext_resource type="Script" uid="uid://bb2empxu8q2hm" path="res://scenes/mine_cell.gd" id="1_j75r1"]
+[ext_resource type="Texture2D" uid="uid://dg4mt1meplw3k" path="res://assets/cell_closed.png" id="2_njsad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njsad"]
+size = Vector2(512, 512)
+
+[node name="MineCell" type="Area2D"]
+script = ExtResource("1_j75r1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_njsad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_njsad")
